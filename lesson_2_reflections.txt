@@ -5,3 +5,12 @@ Steps to create a Git
 3. Check Git status (git status) - shows which branch you're in and what files are waiting to be added to commit.
 	Will show whats in the staging area (ie. already added) and what's left in the working directory that hasn't been added to the staging directory yet.
 4. Add files to staging area ready for a commit (git add filename)
+5. Differences between files
+	git diff (no parameters) compares working_directory to staging_area
+	git diff --staged compares staging_area with most_recent_commit
+	git diff commit_1 commit_2 compares the two commits (the first parameter should be the most recent commit)
+6. Best to only add to staging area (and therefore commits) changes that make logical sense or sit together, for example if fixing bugs, commit each one separately by separately staging them.
+7. Branching
+	git branch (no parameters) shows you what branches currently exist - 'master' is the default - a * by a branch name indicates that it is the branch that is currently checkedout (that you are in)
+	git branch new_branch_name creates a new branch with that name, when you create a branch it shares the same files and content as the branch that you were in when you created the new branch
+	git checkout branch_name switches you into that branch
