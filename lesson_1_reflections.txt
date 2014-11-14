@@ -1,0 +1,4 @@
+These are my reflections from the Udacity Version Control lessons
+I'm afriad that I haven't been writing any as I go along
+However it has been useful to reinforce the concepts learnt through the 
+Makers Academy precourse work.
