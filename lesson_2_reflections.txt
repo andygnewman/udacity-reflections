@@ -9,8 +9,32 @@ Steps to create a Git
 	git diff (no parameters) compares working_directory to staging_area
 	git diff --staged compares staging_area with most_recent_commit
 	git diff commit_1 commit_2 compares the two commits (the first parameter should be the most recent commit)
+	git show commit_1 will show the differences between that commit and it's parent without having to know the commit id of the parent - useful if you've merged branches with interwoven commits.
+	git diff branch_1 branch_2 will show the differences between 2 branches (which is effectively 2 commits - the heads)
 6. Best to only add to staging area (and therefore commits) changes that make logical sense or sit together, for example if fixing bugs, commit each one separately by separately staging them.
-7. Branching
+7. Logs
+	git log (no parameters) # will show a log of your commits in full detail
+    git log --graph --oneline # will show a summarised log of your commits (id and description)
+    git log -n1 # will show just the last commit (though the number is a variable parameter)
+8. Branching
 	git branch (no parameters) shows you what branches currently exist - 'master' is the default - a * by a branch name indicates that it is the branch that is currently checkedout (that you are in)
-	git branch new_branch_name creates a new branch with that name, when you create a branch it shares the same files and content as the branch that you were in when you created the new branch
-	git checkout branch_name switches you into that branch
+	git branch new_branch_name # creates a new branch with that name, when you create a branch it shares the same files and content as the branch that you were in when you created the new branch
+	git checkout branch_name # switches you into that branch
+	there is a short cut to create a new branch and checkout into it in a single line;
+		git checkout -b new_branch_name
+	if you make a commit off a historic commit without branching you can't get back to it - so always branch it!
+	Branching best practice;
+		retain master as the clean, fully working version
+		use branches to run new development off it
+	git log --graph --oneline master branch_1 branch_2 shows the history of commits across multiple branches
+9. Checkout you can checkout either a branch (will go to head) or a specific commit within the branch that you are in
+	git checkout branch
+	git checkout commit
+10. Merging
+	to merge two branches
+		git merge branch_1 branch_2 #this merges branch_2 into branch_1 (often branch_1 would be master)
+	merge conflict - if you get a conflict message during merge you can either
+		abort the merge and go back and fix the issue: git merge --abort
+		or open the file whilst still in merge mode and this will highlight the conflicts that you can resolve then save the file, stage it and then commit - as you are in merge mode, this commit will complete the merge (providing all conflicts are resolved)
+	after merging branches you can delete the old branch (i.e. branch_2) however this means you won't be able to get back to the commits in this branch so be sure it's merged before undertaking this operation.
+		git branch -d branch_2
