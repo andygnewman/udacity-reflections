@@ -1,7 +1,7 @@
 Steps to create a Git
 1. Create directory for the project (mkdir directory_name)
 	Ensure any existing files are in there
-2. Initialise Git (git init)
+2. Initialise Git (git init) remember to cd into the new directory before you initialise.
 3. Check Git status (git status) - shows which branch you're in and what files are waiting to be added to commit.
 	Will show whats in the staging area (ie. already added) and what's left in the working directory that hasn't been added to the staging directory yet.
 4. Add files to staging area ready for a commit (git add filename)
