@@ -2,3 +2,25 @@ This is the third reflections file on using GitHub
 
 When would you create files on GitHub (remote) rather than on Local?
   When a team is working together on a file?
+
+Seting up a remote
+  Create a new repository on GitHub
+  copy the SSH for the repository e.g. git@github.com:andyg72/udacity-reflections.git
+  from command line, within the repository;
+    git remote add origin [SSH for the repository]
+      NOTES: origin is the name for the remote, convention is to call it origin
+  
+  To check that the remote is set up;
+    git remote (-v) # will output the names of the remotes, -v gives the verbose version with full address of the remote
+  
+  then to synch it up;
+    git push (-u) [remote] [branch] # e.g. git push -u origin master
+      # pushes the content of the master branch on your local to the remote (i.e. GitHub)
+      NOTES: -u sets origin master as the default, so in future push / pulls shoudln't need to state origin master
+             master could be replaced for other branches if synching other branches to the remote
+             
+    git pull (-u) [remote] [branch] # e.g. git pull -u origin master
+      # pulls the content of the master branch from the remote (i.e. GitHub) to the local
+      
+      
+  
