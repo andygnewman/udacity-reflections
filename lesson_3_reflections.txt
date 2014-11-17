@@ -1,8 +1,5 @@
 This is the third reflections file on using GitHub
 
-When would you create files on GitHub (remote) rather than on Local?
-  When a team is working together on a file?
-
 Seting up a remote
   Create a new repository on GitHub
   copy the SSH for the repository e.g. git@github.com:andyg72/udacity-reflections.git
@@ -22,5 +19,22 @@ Seting up a remote
     git pull (-u) [remote] [branch] # e.g. git pull -u origin master
       # pulls the content of the master branch from the remote (i.e. GitHub) to the local
       
+  To clone an existing repository
+    from GitHub
+      git clone [SSH for repository] # e.g. git clone git@github.com:andyg72/recipes.git
+        NOTES: git will automatically set-up a directory, initiate Git and name the remote origin
       
+Reflection Questions
+
+When would you create files on GitHub (remote) rather than on Local?
+  When a team is working together on a file?
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote 
+repository?     
+  Because you may not want everything shared at this stage.
+  
+Differences between forks, clones and branches
+  Forks - when building on a pre-existing piece of work that you don't want to impact or don't have permission to interact with
+  Clones - copying from an existing GitHub repository to your local for a project that you're working on with other people
+  Branches - within a project doing a side piece of work that is still part of the project but you don't want to change the master.
   
