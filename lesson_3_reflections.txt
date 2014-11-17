@@ -1,0 +1,4 @@
+This is the third reflections file on using GitHub
+
+When would you create files on GitHub (remote) rather than on Local?
+  When a team is working together on a file?
