@@ -23,6 +23,8 @@ Seting up a remote
     from GitHub
       git clone [SSH for repository] # e.g. git clone git@github.com:andyg72/recipes.git
         NOTES: git will automatically set-up a directory, initiate Git and name the remote origin
+        
+  git branch (-a) # details the branches you have, using -a shows the remote branches also
       
 Reflection Questions
 
@@ -38,3 +40,6 @@ Differences between forks, clones and branches
   Clones - copying from an existing GitHub repository to your local for a project that you're working on with other people
   Branches - within a project doing a side piece of work that is still part of the project but you don't want to change the master.
   
+What is the benefit of having a copy of the last known state of the remote stored locally?
+  So you can see what changes you've made locally since the last push and can verify what subsequent changes have happened to
+  the remote since the last time they were synched
